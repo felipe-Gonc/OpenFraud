@@ -1,5 +1,6 @@
 import express from "express";
 import dotenv from "dotenv";
+import { connectDB } from "./db/connectDB.ts";
 
 const app = express()
 dotenv.config()
@@ -10,4 +11,5 @@ const PORT = process.env.PORT
 
 app.listen(PORT, () => {
     console.log(`Servidor rodando na porta:🚀 http://localhost:${PORT} `);
+    connectDB()
 })
