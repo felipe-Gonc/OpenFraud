@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 import type { TypeReport } from "../types/TypeReport.ts";
 
-export const reportSchema = new mongoose.Schema({
+const reportSchema = new mongoose.Schema({
     pixKey: String, // valor
 
     reportsCount: { // numero de reports
