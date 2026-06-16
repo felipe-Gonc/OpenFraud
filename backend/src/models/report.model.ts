@@ -2,7 +2,10 @@ import mongoose from "mongoose";
 import type { TypeReport } from "../types/TypeReport.ts";
 
 const reportSchema = new mongoose.Schema({
-    pixKey: String, // valor
+    pixKey: {
+        type: String,
+        unique: true
+    }, // valor
 
     reportsCount: { // numero de reports
         type: Number,

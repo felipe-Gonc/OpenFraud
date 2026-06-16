@@ -1,11 +1,16 @@
 import express from "express";
 import dotenv from "dotenv";
 import { connectDB } from "./db/connectDB.ts";
+import authRoute from "./routes/auth.route.ts";
+import reportRoute from "./routes/report.route.ts";
 
 const app = express()
 dotenv.config()
 
 app.use(express.json())
+
+app.use("/api/auth", authRoute)
+app.use("/api/report", reportRoute)
 
 const PORT = process.env.PORT
 
