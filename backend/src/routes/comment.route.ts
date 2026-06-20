@@ -6,5 +6,5 @@ const commentRoute = express.Router();
 commentRoute.post("/createComment", createComment)
 commentRoute.post("/response", response)
 commentRoute.get("/getComment", getComment)
-
+ 
 export default commentRoute;
